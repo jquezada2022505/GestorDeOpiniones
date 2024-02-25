@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "publicationsGestorDeOpiniones",
+    "dateExported": "2024-02-25T08:48:50.952Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3f4b6128-4d83-4094-a72f-92497ac57009",
+            "colId": "72f72a7a-f193-471a-9a63-c9a6a45a85cd",
+            "containerId": "",
+            "name": "publicationsPOST",
+            "url": "localhost:3000/api/publication",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-25T08:25:49.170Z",
+            "modified": "2024-02-25T08:28:07.195Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"holas\",\n  \"category\": \"saludo\",\n  \"description\": \"My first post\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9e1e020a-abb0-48c2-99b7-7a0922754f17",
+            "colId": "72f72a7a-f193-471a-9a63-c9a6a45a85cd",
+            "containerId": "",
+            "name": "publicationsGET",
+            "url": "localhost:3000/api/publication",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-25T08:13:20.864Z",
+            "modified": "2024-02-25T08:13:26.850Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bc9fefcc-0542-4e0e-bcd7-9c1665f51fc4",
+            "colId": "72f72a7a-f193-471a-9a63-c9a6a45a85cd",
+            "containerId": "",
+            "name": "publicationsById",
+            "url": "localhost:3000/api/publication/65dafdb80224786d5b669a22",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-25T08:13:38.001Z",
+            "modified": "2024-02-25T08:43:47.721Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "77d286ac-0772-485c-a1e8-48d99331af88",
+            "colId": "72f72a7a-f193-471a-9a63-c9a6a45a85cd",
+            "containerId": "",
+            "name": "publicationsPUT",
+            "url": "localhost:3000/api/publication/65dafdb60224786d5b669a20",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-25T08:14:05.509Z",
+            "modified": "2024-02-25T08:46:38.543Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"holaaa\",\n  \"category\": \"saludo\",\n  \"description\": \"MI PRIMER POST :)\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8773544d-b0c5-49a4-8e40-d71dbb15c3cc",
+            "colId": "72f72a7a-f193-471a-9a63-c9a6a45a85cd",
+            "containerId": "",
+            "name": "publicationsDELETE",
+            "url": "localhost:3000/api/publication/65dafdb80224786d5b669a22",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-02-25T08:31:02.742Z",
+            "modified": "2024-02-25T08:43:59.993Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

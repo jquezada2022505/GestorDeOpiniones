@@ -8,7 +8,6 @@ const UserSchema = mongoose.Schema({
     category: {
         type: String,
         required: [true, "The category is obligatory"],
-        unique: true,
     },
     description: {
         type: String,

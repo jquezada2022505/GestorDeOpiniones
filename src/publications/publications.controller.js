@@ -42,10 +42,22 @@ export const publicationsPut = async(req, res = response) => {
     const { id } = req.params;
     const { _id, ...resto } = req.body;
 
+    await Publications.findByIdAndUpdate(id, resto);
+
     const publications = await Publications.findOne({ _id: id });
 
     res.status(200).json({
         msg: 'Updated Publication',
         publications
     });
+}
+
+
+export const publicationsDelete = async(req, res) => {
+    const { id } = req.params;
+
+    const publications = await Publications.findByIdAndUpdate(id, { estado: false });
+    const publicationsAutentic = req.publications;
+
+    res.status(200).json({ msg: 'Publication to delete', publications, publicationsAutentic });
 }

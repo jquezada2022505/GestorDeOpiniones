@@ -5,6 +5,7 @@ import {
     publicationsPost,
     getPublicationsById,
     publicationsPut,
+    publicationsDelete
 } from "./publications.controller.js";
 import {
     existePublicationsById,
@@ -41,6 +42,15 @@ router.put(
         validarCampos,
     ],
     publicationsPut
+);
+
+router.delete(
+    "/:id", [
+        check("id", "The ID entered is not valid").isMongoId(),
+        check("id").custom(existePublicationsById),
+        validarCampos,
+    ],
+    publicationsDelete
 );
 
 export default router;

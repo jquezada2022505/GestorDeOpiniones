@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "usersGestorDeOpiniones",
+    "dateExported": "2024-02-25T08:48:42.175Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9e5a5164-5b14-4dbd-bc08-84513a738837",
+            "colId": "c7c8e052-61db-4cd6-be80-e355fca37ab4",
+            "containerId": "",
+            "name": "userPOST",
+            "url": "localhost:3000/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-25T05:24:45.073Z",
+            "modified": "2024-02-25T08:47:16.224Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Josué Quezada\",\n  \"email\": \"josuequezada123@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "08b61ebb-e33d-4306-b1ae-2bf8987f5a6f",
+            "colId": "c7c8e052-61db-4cd6-be80-e355fca37ab4",
+            "containerId": "",
+            "name": "userGET",
+            "url": "localhost:3000/api/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-25T05:44:19.753Z",
+            "modified": "2024-02-25T05:44:23.927Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "17afe4c8-8e93-42a6-9099-aea97863036a",
+            "colId": "c7c8e052-61db-4cd6-be80-e355fca37ab4",
+            "containerId": "",
+            "name": "userGETById",
+            "url": "localhost:3000/api/user/65dafe9418682bcb6114f729",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-25T05:45:31.527Z",
+            "modified": "2024-02-25T08:47:26.572Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ac60b6ee-77af-4446-99fa-afcabe70b7aa",
+            "colId": "c7c8e052-61db-4cd6-be80-e355fca37ab4",
+            "containerId": "",
+            "name": "userPUT",
+            "url": "localhost:3000/api/user/65dafe9418682bcb6114f729",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-25T05:45:52.356Z",
+            "modified": "2024-02-25T08:47:32.770Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Juanitoo Quezada\",\n  \"email\": \"juanit122oquezada123@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
