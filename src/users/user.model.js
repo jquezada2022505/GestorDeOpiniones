@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
 const UserSchema = mongoose.Schema({
-    nombre: {
+    username: {
         type: String,
-        required: [true, "The name is required"],
+        required: [true, "The username is required"],
     },
-    correo: {
+    email: {
         type: String,
         required: [true, "Email is mandatory"],
         unique: true,
@@ -20,7 +20,7 @@ const UserSchema = mongoose.Schema({
     role: {
         type: String,
         required: true,
-        enum: ["ADMIN_ROLE", "CLIENT_ROLE"],
+        enum: ["ADMIN_ROLE"],
     },
     estado: {
         type: Boolean,

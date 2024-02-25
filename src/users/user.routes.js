@@ -5,7 +5,6 @@ import {
     usuariosPost,
     getUsuarioById,
     usuariosPut,
-    usuariosDelete,
 } from "./user.controller.js";
 import {
     existenteEmail,
@@ -31,12 +30,12 @@ router.get(
 
 router.post(
     "/", [
-        check("nombre", "The name is required").not().isEmpty(),
-        check("password", "El password debe ser mayor a 6 caracteres").isLength({
+        check("username", "The username is required").not().isEmpty(),
+        check("password", "Password must be greater than 6 characters").isLength({
             min: 6,
         }),
-        check("correo", "The email entered is not valid ").isEmail(),
-        check("correo").custom(existenteEmail),
+        check("email", "The email entered is not valid ").isEmail(),
+        check("email").custom(existenteEmail),
         check("role").custom(esRoleValido),
         validarCampos,
     ],
@@ -50,17 +49,6 @@ router.put(
         validarCampos,
     ],
     usuariosPut
-);
-
-router.delete(
-    "/:id", [
-        validarJWT,
-        tieneRole("ADMIN_ROLE", "CLIENT_ROLE"),
-        check("id", "The ID entered is not valid").isMongoId(),
-        check("id").custom(existeUsuarioById),
-        validarCampos,
-    ],
-    usuariosDelete
 );
 
 export default router;

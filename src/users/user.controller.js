@@ -19,8 +19,8 @@ export const usuariosGet = async(req = request, res = response) => {
 }
 
 export const usuariosPost = async(req, res) => {
-    const { nombre, correo, password, role } = req.body;
-    const usuario = new User({ nombre, correo, password, role });
+    const { username, email, password, role } = req.body;
+    const usuario = new User({ username, email, password, role });
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
@@ -43,7 +43,7 @@ export const getUsuarioById = async(req, res) => {
 
 export const usuariosPut = async(req, res = response) => {
     const { id } = req.params;
-    const { _id, password, google, correo, ...resto } = req.body;
+    const { _id, password, google, ...resto } = req.body;
 
     if (password) {
         const salt = bcryptjs.genSaltSync();
@@ -58,13 +58,4 @@ export const usuariosPut = async(req, res = response) => {
         msg: 'Updated User',
         usuario
     });
-}
-
-export const usuariosDelete = async(req, res) => {
-    const { id } = req.params;
-
-    const usuario = await User.findByIdAndUpdate(id, { estado: false });
-    const usuarioAutenticado = req.usuario;
-
-    res.status(200).json({ msg: 'User to delete', usuario, usuarioAutenticado });
 }

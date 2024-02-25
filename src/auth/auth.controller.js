@@ -3,10 +3,10 @@ import Usuario from '../users/user.model.js'
 import { generarJWT } from '../helpers/generate-jwt.js';
 
 export const login = async(req, res) => {
-    const { correo, password } = req.body;
+    const { email, password } = req.body;
 
     try {
-        const usuario = await Usuario.findOne({ correo });
+        const usuario = await Usuario.findOne({ email });
 
         if (!usuario) {
             return res.status(400).json({

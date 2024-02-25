@@ -8,7 +8,7 @@ const router = Router()
 
 router.post(
     '/login', [
-        check('correo', 'This is not a valid email').isEmail(),
+        check('email', 'This is not a valid email').isEmail(),
         check('password', 'The password is obligatory').not().isEmpty(),
         validarCampos,
     ], login)
