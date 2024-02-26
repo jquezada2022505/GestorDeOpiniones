@@ -19,8 +19,8 @@ export const usuariosGet = async(req = request, res = response) => {
 }
 
 export const usuariosPost = async(req, res) => {
-    const { username, email, password, role } = req.body;
-    const usuario = new User({ username, email, password, role });
+    const { username, email, password } = req.body;
+    const usuario = new User({ username, email, password });
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
@@ -41,21 +41,39 @@ export const getUsuarioById = async(req, res) => {
     })
 }
 
-export const usuariosPut = async(req, res = response) => {
+export const usuariosPut = async (req, res) => {
     const { id } = req.params;
-    const { _id, password, google, ...resto } = req.body;
+    const { _id, password, google, email, nuevoEmail, ...resto } = req.body;
 
-    if (password) {
-        const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
+    try {
+        const usuario = await User.findById(id);
+        if (!usuario) {
+            return res.status(404).json({ msg: 'Usuario no encontrado.' });
+        }
+
+        if (usuario.email !== email) {
+            return res.status(400).json({ msg: 'El email actual no coincide con el registrado.' });
+        }
+
+        if (password) {
+            const salt = bcryptjs.genSaltSync();
+            resto.password = bcryptjs.hashSync(password, salt);
+        }
+        resto.email = nuevoEmail; 
+
+        await User.findByIdAndUpdate(id, resto, { new: true });
+
+        res.status(200).json({
+            msg: 'Usuario actualizado con éxito',
+            id,
+            nuevoEmail
+        });
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            msg: 'Error al actualizar el usuario'
+        });
     }
+};
 
-    await User.findByIdAndUpdate(id, resto);
-
-    const usuario = await User.findOne({ _id: id });
-
-    res.status(200).json({
-        msg: 'Updated User',
-        usuario
-    });
-}

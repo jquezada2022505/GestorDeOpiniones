@@ -8,11 +8,9 @@ import {
 } from "./user.controller.js";
 import {
     existenteEmail,
-    esRoleValido,
     existeUsuarioById,
 } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validarCampos.js";
-import { tieneRole } from "../middlewares/validar-roles.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
@@ -36,18 +34,21 @@ router.post(
         }),
         check("email", "The email entered is not valid ").isEmail(),
         check("email").custom(existenteEmail),
-        check("role").custom(esRoleValido),
         validarCampos,
     ],
     usuariosPost
 );
 
+
 router.put(
-    "/:id", [
+    "/:id", 
+    [
         check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
+        check('email', 'El email actual es obligatorio').not().isEmpty(),
+        check('nuevoEmail', 'El nuevo email es obligatorio').isEmail(),
         validarCampos,
-    ],
+    ], 
     usuariosPut
 );
 

@@ -10,17 +10,15 @@ const UserSchema = mongoose.Schema({
         required: [true, "Email is mandatory"],
         unique: true,
     },
+    nuevoEmail: {
+        type: String
+    },
     password: {
         type: String,
         required: [true, "Password is required"],
     },
     img: {
         type: String,
-    },
-    role: {
-        type: String,
-        required: true,
-        enum: ["ADMIN_ROLE"],
     },
     estado: {
         type: Boolean,
