@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const UserSchema = mongoose.Schema({
+const PublicationsSchema = mongoose.Schema({
     title: {
         type: String,
         required: [true, "The title is obligatory"],
@@ -26,4 +26,4 @@ const UserSchema = mongoose.Schema({
     },
 });
 
-export default mongoose.model('Publications', UserSchema);
+export default mongoose.model('Publications', PublicationsSchema);
