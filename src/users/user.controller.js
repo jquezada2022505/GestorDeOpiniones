@@ -43,7 +43,7 @@ export const getUsuarioById = async(req, res) => {
 
 export const usuariosPut = async (req, res) => {
     const { id } = req.params;
-    const { _id, password, google, email, nuevoEmail, ...resto } = req.body;
+    const { _id, password, nuevoPassword, google, email, nuevoEmail, ...resto } = req.body;
 
     try {
         const usuario = await User.findById(id);
@@ -55,18 +55,26 @@ export const usuariosPut = async (req, res) => {
             return res.status(400).json({ msg: 'El email actual no coincide con el registrado.' });
         }
 
-        if (password) {
+        if (password && nuevoPassword) {
+            const passwordCorrecto = bcryptjs.compareSync(password, usuario.password);
+            if (!passwordCorrecto) {
+                return res.status(400).json({ msg: 'La contraseña actual es incorrecta.' });
+            }
             const salt = bcryptjs.genSaltSync();
-            resto.password = bcryptjs.hashSync(password, salt);
+            resto.password = bcryptjs.hashSync(nuevoPassword, salt);
+        } else if (password || nuevoPassword) {
+            return res.status(400).json({ msg: 'Se debe proporcionar tanto la contraseña actual como la nueva contraseña.' });
         }
-        resto.email = nuevoEmail; 
 
+        if (nuevoEmail) {
+            resto.email = nuevoEmail;
+        }
         await User.findByIdAndUpdate(id, resto, { new: true });
 
         res.status(200).json({
             msg: 'Usuario actualizado con éxito',
             id,
-            nuevoEmail
+            nuevoEmail: nuevoEmail || email, 
         });
 
     } catch (error) {
@@ -76,4 +84,5 @@ export const usuariosPut = async (req, res) => {
         });
     }
 };
+
 

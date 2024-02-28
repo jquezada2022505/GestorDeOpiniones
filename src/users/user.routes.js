@@ -45,8 +45,10 @@ router.put(
     [
         check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
-        check('email', 'El email actual es obligatorio').not().isEmpty(),
-        check('nuevoEmail', 'El nuevo email es obligatorio').isEmail(),
+        check('email', 'The actual email is obligatory').not().isEmpty(),
+        check('nuevoEmail', 'The new email is obligatory').isEmail(),
+        check('password', 'The actual password is obligatory').not().isEmpty(),
+        check('nuevoPassword', 'The new password is obligatory').isEmail(),
         validarCampos,
     ], 
     usuariosPut
