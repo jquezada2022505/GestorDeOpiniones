@@ -19,8 +19,9 @@ export const publicationsGet = async(req = request, res = response) => {
 }
 
 export const publicationsPost = async(req, res) => {
+    const user = req.user;
     const { title, category, description } = req.body;
-    const publications = new Publications({ title, category, description });
+    const publications = new Publications({ title, category, description, userId: user._id });
 
     await publications.save();
 
@@ -61,3 +62,4 @@ export const publicationsDelete = async(req, res) => {
 
     res.status(200).json({ msg: 'Publication to delete', publications, publicationsAutentic });
 }
+

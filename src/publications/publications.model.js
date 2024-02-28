@@ -1,6 +1,11 @@
 import mongoose from 'mongoose';
 
 const PublicationsSchema = mongoose.Schema({
+    idUser: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: [true, "The User is obligatory"],
+    },
     title: {
         type: String,
         required: [true, "The title is obligatory"],
