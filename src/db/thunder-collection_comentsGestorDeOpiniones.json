@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "comentsGestorDeOpiniones",
+    "dateExported": "2024-02-29T10:27:05.291Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "32582c34-e766-4126-ac61-8286e3c05002",
+            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "containerId": "",
+            "name": "comentsPOST",
+            "url": "localhost:3000/api/coment/65e0389fc80235b435b5352c",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T08:45:32.665Z",
+            "modified": "2024-02-29T10:24:48.371Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMzg5ZmM4MDIzNWI0MzViNTM1MmMiLCJpYXQiOjE3MDkyMDIyNjUsImV4cCI6MTcwOTIwNTg2NX0.WSJaJLia7OIGvBbr7GOAoDxvt8SdcTTCny1odw7LO8I"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"descriptionComent\": \"Este es un comentario\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "de79da92-a817-4beb-8580-a8f82c1d9bd7",
+            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "containerId": "",
+            "name": "comentsGET",
+            "url": "localhost:3000/api/coment",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-29T10:17:07.150Z",
+            "modified": "2024-02-29T10:17:22.811Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

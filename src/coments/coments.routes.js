@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { check } from "express-validator";
+import { check, validationResult } from "express-validator";
 import {
     comentsGet,
     comentsPost,
@@ -11,6 +11,9 @@ import {
     existeComentsById,
 } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validarCampos.js";
+import express from 'express';
+import { validarJWTC } from '../middlewares/validar-jwt.js';
+import jwt from 'jsonwebtoken';
 
 const router = Router();
 
@@ -25,9 +28,19 @@ router.get(
     getComentsById
 );
 
+// router.post(
+//     "/", [
+//         check("descriptionComent", "The description is obligatory").isEmpty(),
+//         validarJWT,
+//         validarCampos,
+//     ],
+//     comentsPost
+// );
+
 router.post(
-    "/", [
+    "/:idPublication", [
         check("descriptionComent", "The description is obligatory").not().isEmpty(),
+        validarJWTC,
         validarCampos,
     ],
     comentsPost
