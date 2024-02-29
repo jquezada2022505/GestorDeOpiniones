@@ -7,6 +7,9 @@ export const existenteEmail = async(email = '') => {
     if (existeEmail) {
         throw new Error(`The email ${email} has already been registered`);
     }
+    if (existeEmail) {
+        throw new Error(`The email ${nuevoEmail} has already been registered`);
+    }
 }
 
 export const existeUsuarioById = async(id = '') => {

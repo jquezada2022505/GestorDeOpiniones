@@ -1,8 +1,9 @@
-import mongoose from 'mongoose';
+import mongoose, { model } from 'mongoose';
+const Schema = mongoose.Schema;
 
 const PublicationsSchema = mongoose.Schema({
     idUser: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: "User",
         required: [true, "The User is obligatory"],
     },
@@ -24,11 +25,7 @@ const PublicationsSchema = mongoose.Schema({
     estado: {
         type: Boolean,
         default: true,
-    },
-    google: {
-        type: Boolean,
-        default: true,
-    },
+    }
 });
 
 export default mongoose.model('Publications', PublicationsSchema);

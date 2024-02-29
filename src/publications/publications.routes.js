@@ -11,8 +11,13 @@ import {
     existePublicationsById,
 } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validarCampos.js";
+import express from 'express';
+import { validarJWT } from '../middlewares/validar-jwt.js';
+import jwt from 'jsonwebtoken';
 
-const router = Router();
+const router = express.Router();
+
+router.post('/publications', validarJWT, publicationsPost);
 
 router.get("/", publicationsGet);
 
@@ -30,6 +35,7 @@ router.post(
         check("title", "The title is obligatory").not().isEmpty(),
         check("category", "The category is obligatory").not().isEmpty(),
         check("description", "The description is obligatory").not().isEmpty(),
+        validarJWT,
         validarCampos,
     ],
     publicationsPost
@@ -39,6 +45,7 @@ router.put(
     "/:id", [
         check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existePublicationsById),
+        validarJWT,
         validarCampos,
     ],
     publicationsPut

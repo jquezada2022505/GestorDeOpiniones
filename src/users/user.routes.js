@@ -41,16 +41,15 @@ router.post(
 
 
 router.put(
-    "/:id", 
-    [
+    "/:id", [
         check("id", "The ID entered is not valid").isMongoId(),
         check("id").custom(existeUsuarioById),
-        check('email', 'The actual email is obligatory').not().isEmpty(),
+        check('email', 'The actual email is obligatory').isEmail(),
         check('nuevoEmail', 'The new email is obligatory').isEmail(),
         check('password', 'The actual password is obligatory').not().isEmpty(),
-        check('nuevoPassword', 'The new password is obligatory').isEmail(),
+        check('nuevoPassword', 'The new password is obligatory').not().isEmpty(),
         validarCampos,
-    ], 
+    ],
     usuariosPut
 );
 

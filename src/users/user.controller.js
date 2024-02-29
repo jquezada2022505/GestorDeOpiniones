@@ -13,8 +13,9 @@ export const usuariosGet = async(req = request, res = response) => {
     ]);
 
     res.status(200).json({
+        msg: 'Added Users',
         total,
-        usuarios
+        usuarios,
     });
 }
 
@@ -28,6 +29,7 @@ export const usuariosPost = async(req, res) => {
     await usuario.save();
 
     res.status(200).json({
+        msg: 'Added User',
         usuario
     });
 }
@@ -41,29 +43,29 @@ export const getUsuarioById = async(req, res) => {
     })
 }
 
-export const usuariosPut = async (req, res) => {
+export const usuariosPut = async(req, res) => {
     const { id } = req.params;
     const { _id, password, nuevoPassword, google, email, nuevoEmail, ...resto } = req.body;
 
     try {
         const usuario = await User.findById(id);
         if (!usuario) {
-            return res.status(404).json({ msg: 'Usuario no encontrado.' });
+            return res.status(404).json({ msg: 'User not found' });
         }
 
         if (usuario.email !== email) {
-            return res.status(400).json({ msg: 'El email actual no coincide con el registrado.' });
+            return res.status(400).json({ msg: 'The current email does not match the registered one' });
         }
 
         if (password && nuevoPassword) {
             const passwordCorrecto = bcryptjs.compareSync(password, usuario.password);
             if (!passwordCorrecto) {
-                return res.status(400).json({ msg: 'La contraseña actual es incorrecta.' });
+                return res.status(400).json({ msg: 'The current password is incorrect' });
             }
             const salt = bcryptjs.genSaltSync();
             resto.password = bcryptjs.hashSync(nuevoPassword, salt);
         } else if (password || nuevoPassword) {
-            return res.status(400).json({ msg: 'Se debe proporcionar tanto la contraseña actual como la nueva contraseña.' });
+            return res.status(400).json({ msg: 'Both the current password and the new password must be provided' });
         }
 
         if (nuevoEmail) {
@@ -72,17 +74,16 @@ export const usuariosPut = async (req, res) => {
         await User.findByIdAndUpdate(id, resto, { new: true });
 
         res.status(200).json({
-            msg: 'Usuario actualizado con éxito',
+            msg: 'User successfully updated',
             id,
-            nuevoEmail: nuevoEmail || email, 
+            nuevoEmail: nuevoEmail || email,
+            nuevoPassword: nuevoPassword || password,
         });
 
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            msg: 'Error al actualizar el usuario'
+            msg: 'Error updating user, check your information carefully'
         });
     }
 };
-
-
