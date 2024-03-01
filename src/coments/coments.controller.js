@@ -33,6 +33,7 @@ export const comentsGet = async(req = request, res = response) => {
 // }
 
 export const comentsPost = async(req, res) => {
+    const user = req.usuario;
     const { descriptionComent } = req.body;
 
     try {
@@ -44,10 +45,10 @@ export const comentsPost = async(req, res) => {
 
         const comentario = new Comentario({
             descriptionComent,
-            idUser: req.usuario._id,
-            idPublication: req.idPublication
+            idUser: user.email,
+            idPublication: req.idPublication,
         });
-        s
+
         await comentario.save();
 
         res.status(200).json({
@@ -56,7 +57,7 @@ export const comentsPost = async(req, res) => {
         });
     } catch (error) {
         console.error('Error creating comment:', error);
-        res.status(500).json({ error: 'Error creating comment' });
+        res.status(400).json({ error: 'Error creating comment' });
     }
 };
 
@@ -65,33 +66,93 @@ export const comentsPost = async(req, res) => {
 
 export const getComentsById = async(req, res) => {
     const { id } = req.params;
-    const coments = await Coments.findOne({ _id: id });
+    const comentario = await Comentario.findOne({ _id: id });
 
     res.status(200).json({
-        coments
+        comentario
     })
 }
+
+// export const comentsPut = async(req, res = response) => {
+//     const { id } = req.params;
+//     const { _id, ...resto } = req.body;
+
+//     await Coments.findByIdAndUpdate(id, resto);
+
+//     const coments = await Coments.findOne({ _id: id });
+
+//     res.status(200).json({
+//         msg: 'Updated Publication',
+//         coments
+//     });
+// }
 
 export const comentsPut = async(req, res = response) => {
     const { id } = req.params;
     const { _id, ...resto } = req.body;
 
-    await Coments.findByIdAndUpdate(id, resto);
+    try {
+        const token = req.header("x-token");
+        if (!token) {
+            return res.status(401).json({ msg: "There is no token in the request" });
+        }
 
-    const coments = await Coments.findOne({ _id: id });
+        const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
+        const usuario = await Usuario.findById(uid);
+        if (!usuario) {
+            return res.status(401).json({ msg: 'User does not exist in the database' });
+        }
 
-    res.status(200).json({
-        msg: 'Updated Publication',
-        coments
-    });
-}
+        // Verificar si el comentario pertenece al usuario autenticado antes de actualizarlo
+        const comentario = await Comentario.findById(id);
+        if (!comentario) {
+            return res.status(404).json({ msg: 'Comment not found' });
+        }
+
+        // // Verificar si el comentario pertenece al usuario autenticado
+        // if (comentario.usuario.toString() !== uid) {
+        //     return res.status(401).json({ msg: 'Unauthorized: You cannot update this comment' });
+        // }
+
+        await Comentario.findByIdAndUpdate(id, resto);
+
+        const updatedComment = await Comentario.findOne({ _id: id });
+
+        res.status(200).json({
+            msg: 'Comment updated successfully',
+            comentario: updatedComment
+        });
+    } catch (error) {
+        console.error('Error updating comment:', error);
+        res.status(400).json({ error: 'Error updating comment' });
+    }
+};
+
 
 
 export const comentsDelete = async(req, res) => {
     const { id } = req.params;
 
-    const coments = await Coments.findByIdAndUpdate(id, { estado: false });
-    const comentsAutentic = req.coments;
+    try {
+        const token = req.header("x-token");
+        if (!token) {
+            return res.status(401).json({ msg: "There is no token in the request" });
+        }
 
-    res.status(200).json({ msg: 'Coment to delete', coments, comentsAutentic });
-}
+        const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
+        const usuario = await Usuario.findById(uid);
+        if (!usuario) {
+            return res.status(401).json({ msg: 'User does not exist in the database' });
+        }
+
+        const comentario = await Comentario.findByIdAndUpdate(id, { estado: false });
+        if (!comentario) {
+            return res.status(404).json({ msg: 'Comment not found' });
+        }
+
+        res.status(200).json({ msg: 'Comment deleted successfully', comentario, usuario });
+    } catch (error) {
+        console.error('Error deleting comment:', error);
+        res.status(40).json({ error: 'Error deleting comment' });
+    }
+};

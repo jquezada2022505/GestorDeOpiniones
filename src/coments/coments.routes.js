@@ -28,15 +28,6 @@ router.get(
     getComentsById
 );
 
-// router.post(
-//     "/", [
-//         check("descriptionComent", "The description is obligatory").isEmpty(),
-//         validarJWT,
-//         validarCampos,
-//     ],
-//     comentsPost
-// );
-
 router.post(
     "/:idPublication", [
         check("descriptionComent", "The description is obligatory").not().isEmpty(),

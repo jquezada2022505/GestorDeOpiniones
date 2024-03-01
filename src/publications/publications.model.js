@@ -19,6 +19,10 @@ const PublicationsSchema = mongoose.Schema({
         type: String,
         required: [true, "The description is obligatory"],
     },
+    idComent: {
+        type: String,
+        ref: "Coment",
+    },
     img: {
         type: String,
     },

@@ -1,25 +1,32 @@
 import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import Publications from './publications.model.js';
+import Comentario from '../coments/coments.model.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';
 import jwt from 'jsonwebtoken';
 import Usuario from '../users/user.model.js';
+import Coment from '../coments/coments.model.js';
 
 export const publicationsGet = async(req = request, res = response) => {
+    const coment = req.coments;
     const { limite, desde } = req.query;
     const query = { estado: true };
-    const [total, publications] = await Promise.all([
+    const [total, publications, coments] = await Promise.all([
         Publications.countDocuments(query),
-        Publications.find(query)
+        Publications.find(query),
+        Comentario.countDocuments(query),
+        Comentario.find(query)
         .skip(Number(desde))
         .limit(Number(limite))
     ]);
 
     res.status(200).json({
         total,
-        publications
+        publications,
+        idComent: req.idComent,
     });
 }
+
 
 export const publicationsPost = async(req, res) => {
     const user = req.usuario;
@@ -30,7 +37,7 @@ export const publicationsPost = async(req, res) => {
             title,
             category,
             description,
-            idUser: user.email
+            idUser: user.email,
         });
 
         await publication.save();
