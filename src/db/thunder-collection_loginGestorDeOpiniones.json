@@ -1,7 +1,11 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginGestorDeOpiniones",
+<<<<<<< HEAD
     "dateExported": "2024-02-29T08:08:16.901Z",
+=======
+    "dateExported": "2024-03-01T05:10:41.983Z",
+>>>>>>> feature/coments
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +18,20 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-29T05:08:23.485Z",
+<<<<<<< HEAD
             "modified": "2024-02-29T07:16:18.527Z",
+=======
+            "modified": "2024-03-01T04:16:43.520Z",
+>>>>>>> feature/coments
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
+<<<<<<< HEAD
                 "raw": "{\n  \"emailOrUsername\": \"emilioarriaga@gmail.com\",\n  \"password\": \"654321\"\n}",
+=======
+                "raw": "{\n  \"emailOrUsername\": \"antonioquezada@gmail.com\",\n  \"password\": \"1234567\"\n}",
+>>>>>>> feature/coments
                 "form": []
             },
             "tests": []

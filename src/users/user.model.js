@@ -11,11 +11,15 @@ const UserSchema = mongoose.Schema({
         unique: true,
     },
     nuevoEmail: {
-        type: String
+        type: String,
+        unique: true,
     },
     password: {
         type: String,
         required: [true, "Password is required"],
+    },
+    nuevoPassword: {
+        type: String,
     },
     img: {
         type: String,
@@ -23,11 +27,7 @@ const UserSchema = mongoose.Schema({
     estado: {
         type: Boolean,
         default: true,
-    },
-    google: {
-        type: Boolean,
-        default: true,
-    },
+    }
 });
 
 UserSchema.methods.toJSON = function() {

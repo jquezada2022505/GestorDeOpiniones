@@ -1,7 +1,11 @@
 {
     "client": "Thunder Client",
     "collectionName": "usersGestorDeOpiniones",
+<<<<<<< HEAD
     "dateExported": "2024-02-29T08:08:30.245Z",
+=======
+    "dateExported": "2024-03-01T05:10:56.833Z",
+>>>>>>> feature/coments
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -39,6 +43,7 @@
             "tests": []
         },
         {
+<<<<<<< HEAD
             "_id": "38ffc5e3-7580-493c-911a-7085f3884cad",
             "colId": "0badffab-f6fd-4ff7-97e2-5fa54f18e301",
             "containerId": "",
@@ -53,20 +58,34 @@
             "tests": []
         },
         {
+=======
+>>>>>>> feature/coments
             "_id": "1f14de61-fc4f-43b4-91c2-a79383f09ac3",
             "colId": "0badffab-f6fd-4ff7-97e2-5fa54f18e301",
             "containerId": "",
             "name": "userPUT",
+<<<<<<< HEAD
             "url": "localhost:3000/api/user/65e03abeb21f3480c3e8fc08",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-02-29T05:08:23.542Z",
             "modified": "2024-02-29T08:06:12.107Z",
+=======
+            "url": "localhost:3000/api/user/65e15d73177be4c3eec2cd6e",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-29T05:08:23.542Z",
+            "modified": "2024-03-01T04:47:12.661Z",
+>>>>>>> feature/coments
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
+<<<<<<< HEAD
                 "raw": "{\n  \"username\": \"Emilio Quezada\",\n  \"email\": \"emilioaia@gmail.com\",\n  \"nuevoEmail\": \"emilioaia122344@gmail.com\",\n  \"password\": \"654321\",\n  \"nuevoPassword\": \"123456\"\n}",
+=======
+                "raw": "{\n  \"username\": \"Antonio Quezada\",\n  \"email\": \"josuequezada1221@gmail.com\",\n  \"nuevoEmail\": \"antonioquezada@gmail.com\",\n  \"password\": \"123456\",\n  \"nuevoPassword\": \"1234567\"\n}",
+>>>>>>> feature/coments
                 "form": []
             },
             "tests": []
