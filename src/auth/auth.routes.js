@@ -10,14 +10,14 @@ const router = Router()
 router.post(
     '/login', [
         check('emailOrUsername')
-        .notEmpty().withMessage('El correo electrónico o nombre de usuario es obligatorio')
+        .notEmpty().withMessage('Email or username is required')
         .custom((value, { req }) => {
             if (!validator.isEmail(value)) {
 
             }
             return true;
         }),
-        check('password', 'La contraseña es obligatoria').notEmpty(),
+        check('password', 'Password is obligatory').notEmpty(),
         validarCampos,
     ], login
 );

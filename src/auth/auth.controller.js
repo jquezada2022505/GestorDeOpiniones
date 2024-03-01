@@ -16,21 +16,21 @@ export const login = async(req, res) => {
 
         if (!usuario) {
             return res.status(400).json({
-                msg: "Credenciales incorrectas, el correo electrónico o nombre de usuario no existe en la base de datos",
+                msg: "Incorrect credentials, email or username does not exist in the database",
             });
         }
 
         const validPassword = bcryptjs.compareSync(password, usuario.password);
         if (!validPassword) {
             return res.status(400).json({
-                msg: "La contraseña es incorrecta",
+                msg: "Password is incorrect",
             });
         }
 
         const token = await generarJWT(usuario.id);
 
         res.status(200).json({
-            msg: 'Inicio de sesión exitoso',
+            msg: 'Successful login',
             usuario,
             token
         });
@@ -38,7 +38,7 @@ export const login = async(req, res) => {
     } catch (e) {
         console.log(e);
         res.status(500).json({
-            msg: "Contacta al administrador",
+            msg: "Contact the administrator",
         });
     }
 }

@@ -21,17 +21,6 @@ export const comentsGet = async(req = request, res = response) => {
     });
 }
 
-// export const comentsPost = async(req, res) => {
-//     const { descriptionComent } = req.body;
-//     const coments = new coments({ descriptionComent });
-
-//     await coments.save();
-
-//     res.status(200).json({
-//         coments
-//     });
-// }
-
 export const comentsPost = async(req, res) => {
     const user = req.usuario;
     const { descriptionComent } = req.body;
@@ -73,20 +62,6 @@ export const getComentsById = async(req, res) => {
     })
 }
 
-// export const comentsPut = async(req, res = response) => {
-//     const { id } = req.params;
-//     const { _id, ...resto } = req.body;
-
-//     await Coments.findByIdAndUpdate(id, resto);
-
-//     const coments = await Coments.findOne({ _id: id });
-
-//     res.status(200).json({
-//         msg: 'Updated Publication',
-//         coments
-//     });
-// }
-
 export const comentsPut = async(req, res = response) => {
     const { id } = req.params;
     const { _id, ...resto } = req.body;
@@ -103,16 +78,10 @@ export const comentsPut = async(req, res = response) => {
             return res.status(401).json({ msg: 'User does not exist in the database' });
         }
 
-        // Verificar si el comentario pertenece al usuario autenticado antes de actualizarlo
         const comentario = await Comentario.findById(id);
         if (!comentario) {
             return res.status(404).json({ msg: 'Comment not found' });
         }
-
-        // // Verificar si el comentario pertenece al usuario autenticado
-        // if (comentario.usuario.toString() !== uid) {
-        //     return res.status(401).json({ msg: 'Unauthorized: You cannot update this comment' });
-        // }
 
         await Comentario.findByIdAndUpdate(id, resto);
 

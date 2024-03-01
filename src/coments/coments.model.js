@@ -8,7 +8,6 @@ const ComentsSchema = mongoose.Schema({
         required: [true, "The User is obligatory"],
     },
     idPublication: {
-        // type: Schema.Types.ObjectId,
         type: String,
         ref: "Publications",
         required: [true, "The publication is obligatory"],
