@@ -1,147 +1,83 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicationsGestorDeOpiniones",
-<<<<<<< HEAD
-    "dateExported": "2024-02-29T08:08:23.799Z",
-=======
-    "dateExported": "2024-03-01T05:10:49.568Z",
->>>>>>> feature/coments
+    "dateExported": "2024-03-02T08:21:03.202Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "feb17281-5dec-4690-8e1f-2cdfb3faeb53",
-            "colId": "e84d30ea-355c-427e-9bc0-11d26f3695cd",
+            "_id": "f9b0af0b-e891-41cd-82ff-20e7afe00eb7",
+            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
             "containerId": "",
-            "name": "publicationsPOST",
+            "name": "publicationPOST",
             "url": "localhost:3000/api/publication",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-29T05:08:23.521Z",
-<<<<<<< HEAD
-            "modified": "2024-02-29T07:21:40.127Z",
+            "created": "2024-03-02T07:23:25.337Z",
+            "modified": "2024-03-02T08:17:58.717Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMmVlN2IwNjdmMGRhNDg1ZDFhMWUiLCJpYXQiOjE3MDkxOTEyODIsImV4cCI6MTcwOTE5NDg4Mn0.GVdxFmXwImglBUJTQaHg6mPSQIytAgm8YG1WZOZSYOA"
-=======
-            "modified": "2024-03-01T04:48:27.530Z",
-            "headers": [
-                {
-                    "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNWQ3MzE3N2JlNGMzZWVjMmNkNmUiLCJpYXQiOjE3MDkyNjg0NzksImV4cCI6MTcwOTI3MjA3OX0.Jpn0PZG-0UIUZwaw5XmgyH9CI7K7ne5E1Cy7-r46c6s"
->>>>>>> feature/coments
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-<<<<<<< HEAD
-                "raw": "{\n  \"title\": \"holis\",\n  \"category\": \"saludos genteee\",\n  \"description\": \"My first post\"\n}",
-=======
-                "raw": "{\n  \"title\": \"holaaa\",\n  \"category\": \"saludos genteee\",\n  \"description\": \"My first post\"\n}",
->>>>>>> feature/coments
+                "raw": "{\n\"title\": \"My primer post\",\n\"category\": \"Saludo\",\n\"description\": \"Holaaa Genteee\"  \n}\n",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "15868070-4d2a-40ab-bc22-ec80d2575c2f",
-            "colId": "e84d30ea-355c-427e-9bc0-11d26f3695cd",
+            "_id": "db08ce8c-f40c-4f12-a845-6a8b1be419ab",
+            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
             "containerId": "",
-            "name": "publicationsGET",
+            "name": "publicationGET",
             "url": "localhost:3000/api/publication",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-29T05:08:23.518Z",
-            "modified": "2024-02-29T05:08:23.518Z",
+            "created": "2024-03-02T07:27:52.330Z",
+            "modified": "2024-03-02T08:18:03.685Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-<<<<<<< HEAD
-            "_id": "2a2f11e9-7d50-4111-b647-8bfba75ec1f4",
-            "colId": "e84d30ea-355c-427e-9bc0-11d26f3695cd",
+            "_id": "43add2ee-4e59-41c9-86e2-7a421e007676",
+            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
             "containerId": "",
-            "name": "publicationsById",
-            "url": "localhost:3000/api/publication/65e03084b067f0da485d1a48",
-            "method": "GET",
+            "name": "publicationPUT",
+            "url": "localhost:3000/api/publication/65e2e0b679a441843a68aa33",
+            "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-02-29T05:08:23.519Z",
-            "modified": "2024-02-29T07:21:48.445Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-=======
->>>>>>> feature/coments
-            "_id": "91d79ffa-7f2a-4b50-8516-b13d64ec2fda",
-            "colId": "e84d30ea-355c-427e-9bc0-11d26f3695cd",
-            "containerId": "",
-            "name": "publicationsPUT",
-<<<<<<< HEAD
-            "url": "localhost:3000/api/publication/65e03084b067f0da485d1a48",
-            "method": "PUT",
-            "sortNum": 40000,
-            "created": "2024-02-29T05:08:23.520Z",
-            "modified": "2024-02-29T07:22:10.101Z",
+            "created": "2024-03-02T07:28:13.082Z",
+            "modified": "2024-03-02T08:18:18.786Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMmVlN2IwNjdmMGRhNDg1ZDFhMWUiLCJpYXQiOjE3MDkxOTEyODIsImV4cCI6MTcwOTE5NDg4Mn0.GVdxFmXwImglBUJTQaHg6mPSQIytAgm8YG1WZOZSYOA"
-=======
-            "url": "localhost:3000/api/publication/65e15e1b177be4c3eec2cd78",
-            "method": "PUT",
-            "sortNum": 40000,
-            "created": "2024-02-29T05:08:23.520Z",
-            "modified": "2024-03-01T04:48:39.530Z",
-            "headers": [
-                {
-                    "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNWQ3MzE3N2JlNGMzZWVjMmNkNmUiLCJpYXQiOjE3MDkyNjg0NzksImV4cCI6MTcwOTI3MjA3OX0.Jpn0PZG-0UIUZwaw5XmgyH9CI7K7ne5E1Cy7-r46c6s"
->>>>>>> feature/coments
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Holaaa\",\n  \"category\": \"saludos\",\n  \"description\": \"MI PRIMER POST :)\"\n}",
+                "raw": "{\n\"title\": \"My primer post\",\n\"category\": \"Saludo\",\n\"description\": \"Holaaa Genteee\"  \n}\n",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "79a26500-17da-4b4a-9402-bc78c109db03",
-            "colId": "e84d30ea-355c-427e-9bc0-11d26f3695cd",
+            "_id": "ef8231ac-e33d-4eb9-9ea5-c5949bced3d8",
+            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
             "containerId": "",
-            "name": "publicationsDELETE",
-<<<<<<< HEAD
-            "url": "localhost:3000/api/publication/65e02f52b067f0da485d1a2e",
-            "method": "DELETE",
-            "sortNum": 60000,
-            "created": "2024-02-29T05:08:23.522Z",
-            "modified": "2024-02-29T07:18:47.133Z",
-            "headers": [
-                {
-                    "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMmVlN2IwNjdmMGRhNDg1ZDFhMWUiLCJpYXQiOjE3MDkxOTA5NzgsImV4cCI6MTcwOTE5NDU3OH0.gqzd0uFeVSWNVUFPxqxq6F10cuykU6Gva4rTpgzJKfY"
-=======
-            "url": "localhost:3000/api/publication/65e156e850ddc7992fba261d",
-            "method": "DELETE",
-            "sortNum": 60000,
-            "created": "2024-02-29T05:08:23.522Z",
-            "modified": "2024-03-01T04:18:12.759Z",
-            "headers": [
-                {
-                    "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNTY2NTUwZGRjNzk5MmZiYTI2MDUiLCJpYXQiOjE3MDkyNjY2MDMsImV4cCI6MTcwOTI3MDIwM30.JYtTogF6TqmIhTEEoedcPwS3AQMP4U0byuqJQil19ng"
->>>>>>> feature/coments
-                }
-            ],
-            "params": [],
-            "tests": []
+            "name": "publicationDELETE",
+            "url": "",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-02T07:30:21.637Z",
+            "modified": "2024-03-02T07:30:21.638Z",
+            "headers": []
         }
     ]
 }

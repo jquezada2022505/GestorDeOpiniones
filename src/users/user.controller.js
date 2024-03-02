@@ -34,6 +34,7 @@ export const usuariosPost = async(req, res) => {
     });
 }
 
+
 export const getUsuarioById = async(req, res) => {
     const { id } = req.params;
     const usuario = await User.findOne({ _id: id });

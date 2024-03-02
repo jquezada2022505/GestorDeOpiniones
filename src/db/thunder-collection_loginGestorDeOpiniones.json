@@ -1,37 +1,25 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginGestorDeOpiniones",
-<<<<<<< HEAD
-    "dateExported": "2024-02-29T08:08:16.901Z",
-=======
-    "dateExported": "2024-03-01T05:10:41.983Z",
->>>>>>> feature/coments
+    "dateExported": "2024-03-02T08:20:58.945Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "e180bbf3-37a4-46aa-b265-f0864fbfa854",
-            "colId": "b27ecb66-c9db-4eca-a91a-e09729af64e0",
+            "_id": "dec4bef2-5e7c-4e33-83b3-c49de887aac6",
+            "colId": "af7e5858-5475-4242-904e-5812e5c567f4",
             "containerId": "",
-            "name": "loginOpiniones",
+            "name": "loginPOST",
             "url": "localhost:3000/api/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-29T05:08:23.485Z",
-<<<<<<< HEAD
-            "modified": "2024-02-29T07:16:18.527Z",
-=======
-            "modified": "2024-03-01T04:16:43.520Z",
->>>>>>> feature/coments
+            "created": "2024-03-02T07:19:20.469Z",
+            "modified": "2024-03-02T08:15:18.693Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-<<<<<<< HEAD
-                "raw": "{\n  \"emailOrUsername\": \"emilioarriaga@gmail.com\",\n  \"password\": \"654321\"\n}",
-=======
-                "raw": "{\n  \"emailOrUsername\": \"antonioquezada@gmail.com\",\n  \"password\": \"1234567\"\n}",
->>>>>>> feature/coments
+                "raw": "{\n  \"emailOrUsername\": \"jdawqwq@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "tests": []

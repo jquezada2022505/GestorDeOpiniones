@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "comentsGestorDeOpiniones",
-    "dateExported": "2024-03-01T05:11:06.551Z",
+    "dateExported": "2024-03-02T08:20:39.568Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "32582c34-e766-4126-ac61-8286e3c05002",
-            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "_id": "33fb1e56-c4da-433a-8710-838b974a3bde",
+            "colId": "a90f6ae6-7c3d-4587-be46-b54babf47aa0",
             "containerId": "",
             "name": "comentsPOST",
-            "url": "localhost:3000/api/coment/65e15e1b177be4c3eec2cd78",
+            "url": "localhost:3000/api/coment/65e2ddd1333bc929e72415c5",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-29T08:45:32.665Z",
-            "modified": "2024-03-01T04:49:27.488Z",
+            "created": "2024-03-02T07:07:20.202Z",
+            "modified": "2024-03-02T08:18:33.267Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNWQ3MzE3N2JlNGMzZWVjMmNkNmUiLCJpYXQiOjE3MDkyNjg0NzksImV4cCI6MTcwOTI3MjA3OX0.Jpn0PZG-0UIUZwaw5XmgyH9CI7K7ne5E1Cy7-r46c6s"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
                 }
             ],
             "params": [],
@@ -30,33 +30,33 @@
             "tests": []
         },
         {
-            "_id": "de79da92-a817-4beb-8580-a8f82c1d9bd7",
-            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "_id": "9753ccd7-ee70-4445-90b1-02ed3988a9cc",
+            "colId": "a90f6ae6-7c3d-4587-be46-b54babf47aa0",
             "containerId": "",
             "name": "comentsGET",
             "url": "localhost:3000/api/coment",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-29T10:17:07.150Z",
-            "modified": "2024-02-29T10:17:22.811Z",
+            "created": "2024-03-02T07:07:20.205Z",
+            "modified": "2024-03-02T07:07:20.205Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "d5d59cca-499b-498f-9311-30232a5fa6d2",
-            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "_id": "f45d30a2-6ef0-4312-ac02-c86e252dbaaf",
+            "colId": "a90f6ae6-7c3d-4587-be46-b54babf47aa0",
             "containerId": "",
             "name": "comentsPUT",
-            "url": "localhost:3000/api/coment/65e15e57177be4c3eec2cd88",
+            "url": "localhost:3000/api/coment/65e2e0d979a441843a68aa31",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-01T03:27:53.322Z",
-            "modified": "2024-03-01T04:49:50.191Z",
+            "created": "2024-03-02T07:07:20.206Z",
+            "modified": "2024-03-02T08:19:34.192Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNWQ3MzE3N2JlNGMzZWVjMmNkNmUiLCJpYXQiOjE3MDkyNjg0NzksImV4cCI6MTcwOTI3MjA3OX0.Jpn0PZG-0UIUZwaw5XmgyH9CI7K7ne5E1Cy7-r46c6s"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
                 }
             ],
             "params": [],
@@ -68,15 +68,15 @@
             "tests": []
         },
         {
-            "_id": "6d684d80-8415-4cb8-9cb3-3c5dc91e60a7",
-            "colId": "74dc53e1-4aa6-4109-90c1-bfb43269a853",
+            "_id": "884f273e-96f1-418b-b9c3-1e25686f0069",
+            "colId": "a90f6ae6-7c3d-4587-be46-b54babf47aa0",
             "containerId": "",
             "name": "comentsDELETE",
             "url": "localhost:3000/api/coment/65e1574150ddc7992fba2639",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-01T03:59:03.519Z",
-            "modified": "2024-03-01T04:19:35.052Z",
+            "created": "2024-03-02T07:07:20.208Z",
+            "modified": "2024-03-02T07:07:20.208Z",
             "headers": [
                 {
                     "name": "x-token",
