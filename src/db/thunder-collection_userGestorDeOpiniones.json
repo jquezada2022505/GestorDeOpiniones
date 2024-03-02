@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "userGestorDeOpiniones",
-    "dateExported": "2024-03-02T08:20:52.993Z",
+    "dateExported": "2024-03-02T08:43:14.058Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "fa7e2679-079e-4241-90f4-224469dc3156",
-            "colId": "83002c7a-11fd-4dca-ae33-13d673a42e3e",
+            "_id": "b5fe4a55-a773-430a-8843-df032672f50d",
+            "colId": "712ebc13-5023-4997-b49f-f18b85ab264b",
             "containerId": "",
             "name": "userPOST",
             "url": "localhost:3000/api/user",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-02T07:10:50.600Z",
-            "modified": "2024-03-02T08:05:37.201Z",
+            "created": "2024-03-02T08:38:28.280Z",
+            "modified": "2024-03-02T08:38:28.280Z",
             "headers": [],
             "params": [],
             "body": {
@@ -25,29 +25,29 @@
             "tests": []
         },
         {
-            "_id": "c9d1781c-76c8-403b-ad8a-2e8cd8287ee8",
-            "colId": "83002c7a-11fd-4dca-ae33-13d673a42e3e",
+            "_id": "9978d23f-d115-4938-8772-e7ce47428336",
+            "colId": "712ebc13-5023-4997-b49f-f18b85ab264b",
             "containerId": "",
             "name": "userGET",
             "url": "localhost:3000/api/user",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-02T07:13:46.051Z",
-            "modified": "2024-03-02T07:31:33.192Z",
+            "created": "2024-03-02T08:38:28.281Z",
+            "modified": "2024-03-02T08:38:28.281Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "0dffc4e8-9d9a-4753-93e0-e617e902fce3",
-            "colId": "83002c7a-11fd-4dca-ae33-13d673a42e3e",
+            "_id": "4b3dc316-05eb-4fb3-9a37-4447dcfaad14",
+            "colId": "712ebc13-5023-4997-b49f-f18b85ab264b",
             "containerId": "",
             "name": "userPUT",
-            "url": "localhost:3000/api/user/65e2e05079a441843a68aa24",
+            "url": "localhost:3000/api/user/65e2e3d8edff7eb84934d6d0",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-02T07:18:18.604Z",
-            "modified": "2024-03-02T08:17:29.331Z",
+            "created": "2024-03-02T08:38:28.282Z",
+            "modified": "2024-03-02T08:38:28.282Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -61,18 +61,6 @@
                 "form": []
             },
             "tests": []
-        },
-        {
-            "_id": "ada74a4c-5dac-4a46-b12d-c1db91cd734f",
-            "colId": "83002c7a-11fd-4dca-ae33-13d673a42e3e",
-            "containerId": "",
-            "name": "userDELETE",
-            "url": "",
-            "method": "GET",
-            "sortNum": 40000,
-            "created": "2024-03-02T07:18:37.666Z",
-            "modified": "2024-03-02T07:18:37.667Z",
-            "headers": []
         }
     ]
 }

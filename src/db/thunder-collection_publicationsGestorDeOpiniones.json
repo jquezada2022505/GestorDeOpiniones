@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicationsGestorDeOpiniones",
-    "dateExported": "2024-03-02T08:21:03.202Z",
+    "dateExported": "2024-03-02T08:43:10.396Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "f9b0af0b-e891-41cd-82ff-20e7afe00eb7",
-            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
+            "_id": "5e013bbb-7ec6-43f4-8cf6-9f90e129349a",
+            "colId": "090e47dc-b31d-481f-a13e-e881be8198b0",
             "containerId": "",
             "name": "publicationPOST",
             "url": "localhost:3000/api/publication",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-02T07:23:25.337Z",
-            "modified": "2024-03-02T08:17:58.717Z",
+            "created": "2024-03-02T08:30:19.355Z",
+            "modified": "2024-03-02T08:33:21.650Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTNkOGVkZmY3ZWI4NDkzNGQ2ZDAiLCJpYXQiOjE3MDkzNjgzODksImV4cCI6MTcwOTM3MTk4OX0.hR1hO-1TltthPhYmuWNW19IWqvww1DQIdcPzhCwhlRk"
                 }
             ],
             "params": [],
@@ -30,33 +30,33 @@
             "tests": []
         },
         {
-            "_id": "db08ce8c-f40c-4f12-a845-6a8b1be419ab",
-            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
+            "_id": "95c2cc5b-3293-47a4-9fb4-ef381f3be5a3",
+            "colId": "090e47dc-b31d-481f-a13e-e881be8198b0",
             "containerId": "",
             "name": "publicationGET",
             "url": "localhost:3000/api/publication",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-02T07:27:52.330Z",
-            "modified": "2024-03-02T08:18:03.685Z",
+            "created": "2024-03-02T08:30:19.356Z",
+            "modified": "2024-03-02T08:30:19.356Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "43add2ee-4e59-41c9-86e2-7a421e007676",
-            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
+            "_id": "9e72cfa0-8c66-45e1-9a56-f874ef079909",
+            "colId": "090e47dc-b31d-481f-a13e-e881be8198b0",
             "containerId": "",
             "name": "publicationPUT",
-            "url": "localhost:3000/api/publication/65e2e0b679a441843a68aa33",
+            "url": "localhost:3000/api/publication/65e2e451edff7eb84934d6db",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-02T07:28:13.082Z",
-            "modified": "2024-03-02T08:18:18.786Z",
+            "created": "2024-03-02T08:30:19.357Z",
+            "modified": "2024-03-02T08:33:36.161Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTA1MDc5YTQ0MTg0M2E2OGFhMjQiLCJpYXQiOjE3MDkzNjczOTMsImV4cCI6MTcwOTM3MDk5M30.YwuvxQYDqLPPfCffCKF5I4ggqq7h1JqGy6EkuLiP-Ok"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZTNkOGVkZmY3ZWI4NDkzNGQ2ZDAiLCJpYXQiOjE3MDkzNjgzODksImV4cCI6MTcwOTM3MTk4OX0.hR1hO-1TltthPhYmuWNW19IWqvww1DQIdcPzhCwhlRk"
                 }
             ],
             "params": [],
@@ -68,16 +68,18 @@
             "tests": []
         },
         {
-            "_id": "ef8231ac-e33d-4eb9-9ea5-c5949bced3d8",
-            "colId": "a436b494-5f97-4950-b676-1092b5634e7f",
+            "_id": "010134b3-3766-4698-b89e-cad5ddc350a3",
+            "colId": "090e47dc-b31d-481f-a13e-e881be8198b0",
             "containerId": "",
             "name": "publicationDELETE",
-            "url": "",
-            "method": "GET",
+            "url": "localhost:3000/api/publication/65e2e451edff7eb84934d6db",
+            "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-02T07:30:21.637Z",
-            "modified": "2024-03-02T07:30:21.638Z",
-            "headers": []
+            "created": "2024-03-02T08:30:19.358Z",
+            "modified": "2024-03-02T08:36:16.966Z",
+            "headers": [],
+            "params": [],
+            "tests": []
         }
     ]
 }
